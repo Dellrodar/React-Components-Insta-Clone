@@ -4,6 +4,7 @@ import CommentSection from "../CommentSection/CommentSectionContainer";
 import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
 
+
 import "./Posts.css";
 
 // pass props in this file to
@@ -25,7 +26,7 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection />
+      <LikeSection likes={props.post.likes} Onclick={props.likes + 1} />
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
